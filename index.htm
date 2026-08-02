@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velocity11 — AI-Powered Productivity Suite for Solopreneurs</title>
-    <meta name="description" content="Premium AI-powered productivity suite. Invoice, manage projects, and deploy AI agents — all from one dashboard. One-time purchase, no subscriptions.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Premium AI-powered productivity tools for solopreneurs. InvoicePro, TaskBoard Pro, and AI Agent Studio. One-time purchase. No subscriptions.">
+    <meta name="keywords" content="AI tools, productivity software, solopreneur, invoice software, project management, AI agents, self-hosted">
+    <meta name="author" content="Velocity11">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velocity11web.vercel.app">
+    <meta property="og:title" content="Velocity11 — Tools That Run Your Business While You Sleep">
+    <meta property="og:description" content="Premium AI-powered productivity suite for solopreneurs. One-time purchase. No subscriptions.">
+    <meta property="og:image" content="https://velocity11web.vercel.app/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://velocity11web.vercel.app">
+    <meta property="twitter:title" content="Velocity11 — Tools That Run Your Business While You Sleep">
+    <meta property="twitter:description" content="Premium AI-powered productivity suite for solopreneurs. One-time purchase. No subscriptions.">
+    <meta property="twitter:image" content="https://velocity11web.vercel.app/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -26,6 +49,16 @@
             }
         }
     </script>
+
+    <!-- Google Analytics (Replace GA_MEASUREMENT_ID with yours) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
     <style>
         body { font-family: 'Inter', sans-serif; }
         .gradient-text {
@@ -73,6 +106,14 @@
         .stagger-2 { animation-delay: 0.2s; transform: translateY(20px); }
         .stagger-3 { animation-delay: 0.3s; transform: translateY(20px); }
         .stagger-4 { animation-delay: 0.4s; transform: translateY(20px); }
+
+        /* Email capture styles */
+        .email-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+        }
+        .email-input:focus {
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+        }
     </style>
 <base target="_blank">
 </head>
@@ -130,7 +171,7 @@
                     <div class="text-sm text-slate-500">Active Users</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-white">19</div>
+                    <div class="text-3xl font-bold text-white">98</div>
                     <div class="text-sm text-slate-500">% Satisfaction</div>
                 </div>
                 <div class="text-center">
@@ -425,7 +466,7 @@
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Client Management</li>
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Lifetime Updates</li>
                     </ul>
-                    <a href="https://harinder29.gumroad.com/l/invoicepro" target="_blank" rel="noopener" class="block w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold text-center rounded-xl transition-colors">
+                    <a href="https://harinder29.gumroad.com/l/invoicepro" target="_blank" rel="noopener" class="block w-full py-3.5 text-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-colors">
                         Get InvoicePro
                     </a>
                 </div>
@@ -445,7 +486,7 @@
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Team Collaboration</li>
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Lifetime Updates</li>
                     </ul>
-                    <a href="https://harinder29.gumroad.com/l/taskboardpro" target="_blank" rel="noopener" class="block w-full py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold text-center rounded-xl transition-colors">
+                    <a href="https://harinder29.gumroad.com/l/taskboardpro" target="_blank" rel="noopener" class="block w-full py-3.5 text-center bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition-colors">
                         Get TaskBoard Pro
                     </a>
                 </div>
@@ -465,7 +506,7 @@
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Custom Agent Templates</li>
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Lifetime Updates</li>
                     </ul>
-                    <a href="https://harinder29.gumroad.com/l/aiagentstudio" target="_blank" rel="noopener" class="block w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center rounded-xl transition-colors">
+                    <a href="https://harinder29.gumroad.com/l/aiagentstudio" target="_blank" rel="noopener" class="block w-full py-3.5 text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-colors">
                         Get AI Agent Studio
                     </a>
                 </div>
@@ -490,7 +531,7 @@
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority Support</li>
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Lifetime Updates</li>
                     </ul>
-                    <a href="https://harinder29.gumroad.com/l/complete-suite" target="_blank" rel="noopener" class="block w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold text-center rounded-xl transition-colors">
+                    <a href="https://harinder29.gumroad.com/l/complete-suite" target="_blank" rel="noopener" class="block w-full py-3.5 text-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-colors">
                         Get The Complete Suite
                     </a>
                 </div>
@@ -543,13 +584,31 @@
         </div>
     </section>
 
+    <!-- Email Capture Section (ConvertKit) -->
+    <section id="newsletter" class="py-24 bg-slate-900/30 relative overflow-hidden">
+        <div class="email-glow absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                Join 2,400+ Solopreneurs
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Get Product Updates & <span class="gradient-text">Exclusive Deals</span></h2>
+            <p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto">New templates, features, and early access to upcoming tools. No spam. Unsubscribe anytime.</p>
+
+            <!-- ConvertKit Form Embed -->
+            <script async data-uid="7f8016740d" src="https://velocity11.kit.com/7f8016740d/index.js"></script>
+
+            <p class="text-sm text-slate-600 mt-6">🔒 We never share your email. Join 2,400+ solopreneurs getting weekly productivity tips.</p>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-24 bg-slate-900/30">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Move at <span class="gradient-text">Velocity11</span>?</h2>
             <p class="text-xl text-slate-400 mb-10">Join 2,400+ solopreneurs who replaced their subscription stack with tools they own forever.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#pricing" class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all hover:scale-105">
+                <a href="#products" class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all hover:scale-105">
                     Start Building
                 </a>
                 <a href="mailto:hello@velocity11.dev" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition-all">
@@ -582,3 +641,4 @@
 
 </body>
 </html>
+Add ConvertKit email capture
