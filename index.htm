@@ -6,6 +6,7 @@
     <title>Velocity11 — Open-Source Dev Tools, Packaged & Ready</title>
     <meta name="description" content="Self-hosted invoicing, project management, and AI agents. Packaged from trusted open-source projects with setup guides and support. One-time purchase.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -336,17 +337,30 @@
             <h2 class="text-3xl font-bold mb-4">Get Launch Updates</h2>
             <p class="text-gray-400 mb-8">New templates, features, and early access to upcoming tools. No spam. Unsubscribe anytime.</p>
             
-            <!-- Replace this with your actual ConvertKit form embed code -->
-            <form action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions" method="post" class="flex flex-col sm:flex-row gap-3">
-                <input type="email" name="email_address" placeholder="Enter your email" required class="flex-1 px-4 py-3 bg-dark-800 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent-500">
-                <button type="submit" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition">
-                    Subscribe
-                </button>
-            </form>
+            <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel mb-4 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+                    </div>
+                </div>
+                <div id="success-message" class="sib-form-message-panel mb-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+                    </div>
+                </div>
+
+                <div id="sib-container">
+                    <form id="sib-form" method="POST" action="https://5226275f.sibforms.com/serve/MUIFAAPgPxa2BuNvcnan4H3zUzOhZV9G44-nErg6kFDzHLBV_LmbMj1zNGDF9kGw1J-oTvkJsyhE3rQjx5lB3tWihxnCk7G0Jaoadhki78wzpctXaO5cacCRAWIQMXRLBhtLvJiyOVoDUDQMFOWMNHhPDfXenc02FTOfar7giR4b0t5WetBfGsEG_OOTFODNt0sHGjH_CKJbXqJNTQ==" data-type="subscription" class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="Enter your email" data-required="true" required class="flex-1 px-4 py-3 bg-dark-800 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent-500">
+                        <button form="sib-form" type="submit" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition">
+                            Subscribe
+                        </button>
+                        <input type="text" name="email_address_check" value="" class="hidden">
+                        <input type="hidden" name="locale" value="en">
+                    </form>
+                </div>
+            </div>
             <p class="text-gray-600 text-xs mt-4">🔒 We never share your email.</p>
-            
-            <!-- NOTE: Replace the form action URL with your actual ConvertKit form URL. 
-                 Get it from: ConvertKit → Forms → Your Form → HTML → copy the form action URL -->
         </div>
     </section>
 
@@ -360,7 +374,7 @@
                 </div>
                 <div class="flex gap-6 text-sm text-gray-500">
                     <a href="https://twitter.com/harinder2" target="_blank" class="hover:text-white transition">Twitter/X</a>
-                    <a href="https://github.com/harindermanish-stack" target="_blank" class="hover:text-white transition">GitHub</a>
+                    <a href="https://github.com/harindermansh-stack" target="_blank" class="hover:text-white transition">GitHub</a>
                     <a href="mailto:support@velocity11.dev" class="hover:text-white transition">Support</a>
                 </div>
                 <div class="text-gray-600 text-sm">
@@ -382,5 +396,25 @@
         </div>
     </footer>
 
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.LOCALE = 'en';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+      window.INVALID_NUMBER = "The information provided is invalid. Please review the field format and try again.";
+      window.INVALID_DATE = "Please enter a valid date";
+      window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected',
+          selectedOption: '{quantity} selected',
+          selectedOptions: '{quantity} selected',
+        }
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
