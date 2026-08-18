@@ -7,6 +7,11 @@ const required = [
   '<link rel="canonical" href="https://velocity11.in/">',
   'https://velocity11.in/social-preview.png',
   'https://x.com/Velocity11AI',
+  'https://www.instagram.com/velocity11ai/',
+  'https://www.facebook.com/profile.php?id=61593631102687',
+  'https://www.youtube.com/@Velocity11AI',
+  'https://www.pinterest.com/Velocity11AI/',
+  'https://github.com/harindermansh-stack',
   "sendEvent('view_product'",
   "sendEvent('click_product_cta'",
   "sendEvent('click_gumroad'",
@@ -18,8 +23,11 @@ const required = [
 
 required.forEach((value) => assert.ok(html.includes(value), `Missing required content: ${value}`));
 
+const retiredHandle = ['harinder', '2'].join('');
 const forbidden = [
-  'twitter.com/harinder2',
+  `@${retiredHandle}`,
+  `x.com/${retiredHandle}`,
+  `twitter.com/${retiredHandle}`,
   'PHLAUNCH',
   'Productive in 5 Minutes',
   'Vercel, Netlify, or your own server',
