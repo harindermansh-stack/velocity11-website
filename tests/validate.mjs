@@ -31,7 +31,17 @@ const forbidden = [
   'PHLAUNCH',
   'Productive in 5 Minutes',
   'Vercel, Netlify, or your own server',
-  'mailto:hello@velocity11.in'
+  'mailto:hello@velocity11.in',
+  'Time Tracking Built-in',
+  'GitHub/Jira Integration',
+  'Licensed under MIT',
+  'Licensed under Apache 2.0',
+  'Priority support',
+  'Exclusive templates',
+  'Pre-built workflows',
+  'premium templates',
+  'QR Code Payments',
+  'stable and fully functional'
 ];
 
 forbidden.forEach((value) => assert.ok(!html.includes(value), `Forbidden stale or unverified content remains: ${value}`));
